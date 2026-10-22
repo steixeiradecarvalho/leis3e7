@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101722">
+<meta name="description" content="Uma introdução visual e interativa à Lei de Três e à Lei de Sete no Eneagrama de Gurdjieff.">
+<title>O Eneagrama de Gurdjieff — Lei de Três e Lei de Sete</title>
+<style>
+:root{color-scheme:dark;--bg:#101722;--panel:#172231;--panel2:#1d2a3a;--text:#edf2f8;--muted:#aab8c8;--line:#344457;--gold:#e8b66b;--blue:#82b3e5;--green:#94c9aa;--accent:#d7e7f7;--radius:20px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#24334a 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--blue)}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(calc(100% - 32px),var(--max));margin-inline:auto}.topbar{padding:22px 0;border-bottom:1px solid #ffffff12}.brand{font-size:.82rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);font-weight:700}
+.hero{padding:76px 0 44px;max-width:850px}.eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(2.35rem,6vw,4.8rem);line-height:1.03;letter-spacing:-.045em;margin:14px 0 22px}.hero p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:760px}.pillrow{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:.86rem}
+section{padding:40px 0}.section-head{max-width:760px;margin-bottom:24px}.section-head h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.035em;line-height:1.12;margin:0 0 12px}.section-head p{color:var(--muted);margin:0}.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:linear-gradient(150deg,#1b2939,#151f2c);border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-width:0}.law-icon{height:150px;display:grid;place-items:center;background:#101a28;border-radius:14px;margin-bottom:18px}.law-icon svg{width:100%;max-width:260px;height:140px}.card h3{font-size:1.3rem;margin:0 0 8px}.card p{color:var(--muted);margin:0}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.btn{border:1px solid var(--line);border-radius:12px;padding:10px 15px;background:#1b2939;color:var(--text);font-weight:650;transition:background .15s,border-color .15s}.btn:hover{border-color:#8da4bd}.btn[aria-pressed="true"],.btn.primary{background:var(--gold);color:#18202a;border-color:var(--gold)}.diagram-card{padding:14px}.diagram{width:100%;display:block;max-height:500px}.diagram-note{font-size:.88rem;color:var(--muted);padding:0 10px 8px}.point-select{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:7px;margin:16px 0}.point-btn{padding:9px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text);font-weight:700}.point-btn[aria-pressed="true"]{background:var(--gold);color:#18202a;border-color:var(--gold)}.detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.detail h3{margin:0 0 7px}.detail p{margin:0;color:var(--muted)}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);padding:8px 4px}.legend span{display:flex;align-items:center;gap:7px}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.sequence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}.note{padding:13px;border-radius:13px;background:var(--panel2);border:1px solid var(--line);text-align:center}.note strong{display:block;font-size:1.15rem;color:var(--blue)}.note.interval strong{color:var(--gold)}.small{font-size:.9rem;color:var(--muted)}.steps{counter-reset:step;display:grid;gap:12px}.step{position:relative;padding:18px 18px 18px 62px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#293b50;color:var(--gold);font-weight:800}.step h3{margin:0 0 4px;font-size:1.1rem}.step p{margin:0;color:var(--muted)}.callout{border-left:3px solid var(--gold);padding:14px 18px;background:#e8b66b0c;color:var(--muted);border-radius:0 12px 12px 0}.footer{border-top:1px solid #ffffff15;padding:28px 0 42px;color:var(--muted);font-size:.9rem}.footer strong{color:var(--text)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:720px){.hero{padding-top:52px}.two-col{grid-template-columns:1fr}.card{padding:18px}.point-select{gap:5px}.point-btn{padding:8px 0}.sequence{grid-template-columns:repeat(2,minmax(0,1fr))}.diagram-card{padding:7px}.section-head{margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><div class="brand">Caderno visual · Filosofia dos processos</div></div></header>
+<main>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Gurdjieff · Uma leitura visual</div>
+    <h1>O Eneagrama e as leis do devir</h1>
+    <p>A Lei de Três investiga as forças que tornam uma transformação possível. A Lei de Sete descreve como um processo se desenvolve por etapas e encontra intervalos. No símbolo do Eneagrama, as duas leis são representadas em conjunto.</p>
+    <div class="pillrow"><span class="pill">Lei de Três</span><span class="pill">Lei de Sete</span><span class="pill">Diagrama interativo</span></div>
+  </header>
+
+  <section aria-labelledby="visao-geral">
+    <div class="section-head"><h2 id="visao-geral">Duas leis, duas perguntas</h2><p>Uma trata da interação de forças; a outra, da continuidade e das interrupções de um processo.</p></div>
+    <div class="two-col">
+      <article class="card">
+        <div class="law-icon"><svg viewBox="0 0 220 130" role="img" aria-label="Triângulo representando três forças"><path d="M110 15 L35 112 L185 112 Z" fill="none" stroke="#e8b66b" stroke-width="3"/><circle cx="110" cy="15" r="10" fill="#e8b66b"/><circle cx="35" cy="112" r="10" fill="#82b3e5"/><circle cx="185" cy="112" r="10" fill="#94c9aa"/><g fill="#101722" text-anchor="middle" font-weight="800"><text x="110" y="19">+</text><text x="35" y="116">−</text><text x="185" y="116">↔</text></g></svg></div>
+        <h3>Lei de Três</h3><p>Como forças afirmadoras, negadoras e reconciliadoras entram em relação e dão origem a um acontecimento ou fenômeno?</p>
+      </article>
+      <article class="card">
+        <div class="law-icon"><svg viewBox="0 0 220 130" role="img" aria-label="Sequência de sete etapas com dois intervalos destacados"><path d="M18 100 L48 73 L77 47 L106 27 L135 43 L164 70 L194 100" fill="none" stroke="#82b3e5" stroke-width="3" stroke-linejoin="round"/><g fill="#82b3e5"><circle cx="18" cy="100" r="5"/><circle cx="48" cy="73" r="5"/><circle cx="77" cy="47" r="7" fill="#e8b66b"/><circle cx="106" cy="27" r="5"/><circle cx="135" cy="43" r="5"/><circle cx="164" cy="70" r="7" fill="#e8b66b"/><circle cx="194" cy="100" r="5"/></g></svg></div>
+        <h3>Lei de Sete</h3><p>Como um processo se desenvolve ao longo do tempo, e por que pode perder impulso, desviar-se ou precisar de novos estímulos?</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="explorar">
+    <div class="section-head"><h2 id="explorar">Explore o Eneagrama</h2><p>Alterne as camadas do desenho e selecione um ponto para examinar a estrutura. A figura é uma representação esquemática das relações tradicionalmente associadas às duas leis.</p></div>
+    <div class="controls" role="group" aria-label="Camada do diagrama">
+      <button class="btn" data-law="three" aria-pressed="false">Lei de Três</button>
+      <button class="btn" data-law="seven" aria-pressed="false">Lei de Sete</button>
+      <button class="btn" data-law="both" aria-pressed="true">Ambas as leis</button>
+    </div>
+    <div class="card diagram-card">
+      <svg id="enneagram" class="diagram" viewBox="0 0 360 340" role="img" aria-labelledby="svgtitle svgdesc">
+        <title id="svgtitle">Eneagrama das leis de Três e de Sete</title><desc id="svgdesc">Círculo com nove pontos numerados, triângulo 9-3-6 e sequência interna 1-4-2-8-5-7-1.</desc>
+        <circle cx="180" cy="155" r="119" fill="none" stroke="#718197" stroke-width="1.7"/>
+        <path id="hexad" d="" fill="none" stroke="#82b3e5" stroke-width="3" stroke-linejoin="round"/>
+        <path id="triangle" d="" fill="none" stroke="#e8b66b" stroke-width="3.5" stroke-linejoin="round"/>
+        <g id="nodes"></g>
+        <text x="180" y="151" fill="#edf2f8" font-size="12" font-weight="700" text-anchor="middle">PROCESSO</text>
+        <text x="180" y="168" fill="#aab8c8" font-size="10" text-anchor="middle">EM MOVIMENTO</text>
+        <text x="180" y="322" fill="#aab8c8" font-size="10" text-anchor="middle" id="diagram-caption">As duas leis em uma figura</text>
+      </svg>
+      <div class="legend"><span><i class="dot" style="background:var(--gold)"></i> Triângulo · Lei de Três</span><span><i class="dot" style="background:var(--blue)"></i> Figura interna · Lei de Sete</span></div>
+      <p class="diagram-note">Selecione um número abaixo para ler uma interpretação introdutória. Os números não são, por si, as três forças.</p>
+      <div class="point-select" id="point-select" role="group" aria-label="Selecionar ponto do Eneagrama"></div>
+      <div class="detail" aria-live="polite"><h3 id="point-title">Ponto 9 · Unidade e origem</h3><p id="point-description">O ponto 9 é um vértice do triângulo e fecha a sequência interna. Pode simbolizar o início considerado de um ciclo ou a conclusão que prepara outro começo.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="lei-tres">
+    <div class="section-head"><h2 id="lei-tres">1. Lei de Três: forças em relação</h2><p>Na formulação de Gurdjieff, um acontecimento não é explicado apenas pela oposição entre dois fatores. Uma terceira força participa da relação e torna possível uma transformação.</p></div>
+    <div class="two-col">
+      <article class="card"><h3 style="color:var(--gold)">Força afirmadora</h3><p>O impulso para iniciar, agir ou modificar uma situação.</p></article>
+      <article class="card"><h3 style="color:var(--blue)">Força negadora</h3><p>Resistência, limite, inércia ou tendência que contraria o impulso inicial.</p></article>
+      <article class="card" style="grid-column:1/-1"><h3 style="color:var(--green)">Força reconciliadora</h3><p>O terceiro fator que coloca as outras duas forças em uma relação produtiva. Não precisa ser um meio-termo: pode ser uma nova condição, um recurso, uma pessoa ou uma mudança de perspectiva.</p></article>
+    </div>
+    <div class="card" style="margin-top:18px"><h3>Exemplo: plantar uma horta</h3><div class="steps" style="margin-top:14px">
+      <div class="step"><h3>Intenção</h3><p>Quero cultivar alimentos.</p></div>
+      <div class="step"><h3>Resistências</h3><p>Tenho pouco tempo, espaço e recursos.</p></div>
+      <div class="step"><h3>Terceiro fator</h3><p>Um método adequado — canteiros pequenos, planejamento e irrigação simples — integra intenção e limites.</p></div>
+      <div class="step"><h3>Transformação</h3><p>Surge uma horta viável, que não existiria apenas pela intenção nem pela resistência isoladamente.</p></div>
+    </div></div>
+    <p class="callout" style="margin-top:18px">No Eneagrama, o triângulo que liga os pontos 9, 3 e 6 representa estruturalmente a Lei de Três. Esses pontos não devem ser confundidos com as três forças em si.</p>
+  </section>
+
+  <section aria-labelledby="lei-sete">
+    <div class="section-head"><h2 id="lei-sete">2. Lei de Sete: o desenvolvimento não é linear</h2><p>Gurdjieff relaciona a lei à escala musical: sete notas distintas conduzem à repetição da nota inicial em outra oitava. A analogia destaca que os processos podem encontrar intervalos em que precisam de um impulso adicional.</p></div>
+    <div class="card">
+      <div class="sequence" aria-label="Sequência de uma oitava musical">
+        <div class="note"><strong>DÓ</strong><span class="small">1º estágio</span></div><div class="note"><strong>RÉ</strong><span class="small">2º estágio</span></div><div class="note interval"><strong>MI</strong><span class="small">1º intervalo</span></div><div class="note"><strong>FÁ</strong><span class="small">4º estágio</span></div><div class="note"><strong>SOL</strong><span class="small">5º estágio</span></div><div class="note interval"><strong>LÁ</strong><span class="small">2º intervalo</span></div><div class="note"><strong>SI</strong><span class="small">7º estágio</span></div><div class="note"><strong>DÓ′</strong><span class="small">Nova oitava</span></div>
+      </div>
+      <div class="two-col">
+        <div><h3 style="color:var(--gold)">MI → FÁ</h3><p class="small">Primeiro intervalo. Sem um novo impulso, o processo pode perder força ou desviar-se.</p></div>
+        <div><h3 style="color:var(--gold)">SI → DÓ′</h3><p class="small">Segundo intervalo. Outro impulso é necessário para completar a oitava e alcançar um novo nível.</p></div>
+      </div>
+    </div>
+    <h3 style="margin-top:24px">A figura interna de seis pontos</h3>
+    <p style="color:var(--muted)">A sequência 1 → 4 → 2 → 8 → 5 → 7 → 1 é associada à expansão decimal periódica de um sétimo:</p>
+    <div class="card" style="text-align:center;margin-top:12px"><div style="font-size:clamp(1.6rem,5vw,2.5rem);font-weight:750;letter-spacing:.06em;color:var(--blue)">1 → 4 → 2 → 8 → 5 → 7</div><p class="small" style="margin:8px 0 0">1/7 = 0,142857142857…</p></div>
+    <p class="callout" style="margin-top:18px">A correspondência matemática ajuda a entender a sequência geométrica. Ela não demonstra, por si só, que todos os processos naturais obedeçam literalmente a essa lei filosófica.</p>
+  </section>
+
+  <section aria-labelledby="juntas">
+    <div class="section-head"><h2 id="juntas">3. As duas leis em ação</h2><p>Considere o aprendizado de uma língua. A Lei de Três ajuda a investigar as forças em jogo; a Lei de Sete, o modo como o aprendizado avança e encontra obstáculos.</p></div>
+    <div class="steps">
+      <div class="step"><h3>Surge uma intenção</h3><p>Você decide aprender uma língua. O desejo dá início ao processo, mas ainda não garante o resultado.</p></div>
+      <div class="step"><h3>Entram em jogo forças diferentes</h3><p>Curiosidade e propósito impulsionam o estudo; cansaço, distração e insegurança podem contrariá-lo.</p></div>
+      <div class="step"><h3>Uma terceira condição transforma a relação</h3><p>Uma rotina realista, um professor ou uma conversa significativa pode tornar o estudo sustentável.</p></div>
+      <div class="step"><h3>O processo encontra intervalos</h3><p>A empolgação inicial diminui; depois, os exercícios familiares deixam de produzir o mesmo avanço. É hora de ajustar o método e buscar novos estímulos.</p></div>
+      <div class="step"><h3>Surge uma nova qualidade</h3><p>Você começa a usar a língua espontaneamente, em vez de apenas estudar regras. Um ciclo de aprendizagem se transforma e abre espaço para outro.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="sintese">
+    <div class="section-head"><h2 id="sintese">Em síntese</h2></div>
+    <div class="two-col">
+      <article class="card"><h3 style="color:var(--gold)">Lei de Três</h3><p><strong>Quais forças precisam interagir</strong> para que um acontecimento ou uma transformação se torne possível?</p></article>
+      <article class="card"><h3 style="color:var(--blue)">Lei de Sete</h3><p><strong>Como o processo se desenvolve no tempo</strong>, onde pode estagnar e que novos impulsos podem ser necessários?</p></article>
+    </div>
+    <p class="callout" style="margin-top:18px">Nota de leitura: Gurdjieff apresentou essas leis em um ensinamento espiritual e cosmológico. O Eneagrama aqui é tratado como um modelo simbólico para interpretar processos, não como uma lei universal da física experimental. Sua utilidade reflexiva deve ser distinguida de uma validação científica.</p>
+  </section>
+</div>
+</main>
+<footer class="footer"><div class="wrap"><strong>O Eneagrama e as leis do devir</strong><br>Material introdutório e educativo · Diagrama esquemático · Sem dependências externas</div></footer>
+<script>
+(() => {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const cx=180, cy=155, r=119;
+  const points={};
+  for(let n=1;n<=9;n++){
+    const angle=(-90+n*40)*Math.PI/180;
+    points[n]={x:cx+r*Math.cos(angle),y:cy+r*Math.sin(angle)};
+  }
+  const pathFor=arr=>arr.map((n,i)=>`${i?'L':'M'} ${points[n].x.toFixed(2)} ${points[n].y.toFixed(2)}`).join(' ');
+  document.querySelector('#triangle').setAttribute('d',pathFor([9,3,6])+' Z');
+  document.querySelector('#hexad').setAttribute('d',pathFor([1,4,2,8,5,7,1]));
+  const nodeGroup=document.querySelector('#nodes');
+  const descriptions={
+    1:['Início do ciclo','Como ponto de partida para a sequência interna, o ponto 1 permite pensar no início de um processo e nas condições que colocam seu desenvolvimento em movimento.'],
+    2:['Desenvolvimento','Na sequência interna, o ponto 2 vem depois do ponto 4. Use-o como convite para observar como uma etapa depende do que veio antes e prepara as seguintes.'],
+    3:['Vértice do triângulo','O ponto 3 integra o triângulo 9–3–6, associado à Lei de Três. O triângulo representa uma relação estrutural entre três forças, não três tipos de personalidade.'],
+    4:['Desenvolvimento','O ponto 4 participa da sequência interna 1–4–2–8–5–7. A sequência é cíclica e não corresponde à ordem crescente dos números.'],
+    5:['Desenvolvimento','O ponto 5 faz parte da sequência interna. Ele ajuda a visualizar que a dinâmica de um processo não precisa seguir uma linha reta nem uma ordem numérica.'],
+    6:['Vértice do triângulo','O ponto 6, junto dos pontos 9 e 3, forma o triângulo associado à Lei de Três. A interpretação das forças depende do processo concreto que se está examinando.'],
+    7:['Retorno da sequência interna','A sequência interna passa pelo ponto 7 e retorna ao ponto 1. Esse fechamento pode ser lido como repetição, continuidade ou início de um novo ciclo.'],
+    8:['Desenvolvimento','O ponto 8 integra a sequência 1–4–2–8–5–7. Observe as relações entre os pontos, em vez de atribuir a cada número um significado universal fixo.'],
+    9:['Unidade e origem','O ponto 9 é um vértice do triângulo e fecha a sequência interna. Pode simbolizar o início considerado de um ciclo ou a conclusão que prepara outro começo.']
+  };
+  for(let n=1;n<=9;n++){
+    const p=points[n], g=document.createElementNS(svgNS,'g');g.dataset.point=n;
+    const c=document.createElementNS(svgNS,'circle');c.setAttribute('cx',p.x);c.setAttribute('cy',p.y);c.setAttribute('r',10);c.setAttribute('class','node-circle');c.setAttribute('fill','#718197');c.setAttribute('stroke','#edf2f8');c.setAttribute('stroke-width','1.4');
+    const t=document.createElementNS(svgNS,'text');t.setAttribute('x',p.x);t.setAttribute('y',p.y+4);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','11');t.setAttribute('font-weight','800');t.setAttribute('fill','#101722');t.textContent=n;
+    g.append(c,t);nodeGroup.append(g);
+  }
+  let currentLaw='both', selected=9;
+  const triangle=[9,3,6], hexad=[1,4,2,8,5,7];
+  const pointSelect=document.querySelector('#point-select');
+  for(let n=1;n<=9;n++){
+    const b=document.createElement('button');b.className='point-btn';b.textContent=n;b.type='button';b.setAttribute('aria-pressed',String(n===selected));b.setAttribute('aria-label',`Selecionar ponto ${n}`);b.addEventListener('click',()=>selectPoint(n));pointSelect.append(b);
+  }
+  function selectPoint(n){
+    selected=n;
+    document.querySelectorAll('.point-btn').forEach((b,i)=>b.setAttribute('aria-pressed',String(i+1===n)));
+    document.querySelectorAll('#nodes g').forEach(g=>{
+      const k=Number(g.dataset.point), c=g.querySelector('circle');
+      c.setAttribute('r',k===n?14:10);
+      c.setAttribute('fill',k===n?'#f2cf83':(currentLaw==='three'&&triangle.includes(k)?'#e8b66b':(currentLaw==='seven'&&hexad.includes(k)?'#82b3e5':(currentLaw==='both'&&triangle.includes(k)?'#e8b66b':'#718197'))));
+      c.setAttribute('stroke',k===n?'#fff1c9':'#edf2f8');
+    });
+    document.querySelector('#point-title').textContent=`Ponto ${n} · ${descriptions[n][0]}`;
+    document.querySelector('#point-description').textContent=descriptions[n][1];
+  }
+  function setLaw(law){
+    currentLaw=law;
+    document.querySelectorAll('[data-law]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.law===law)));
+    document.querySelector('#triangle').style.opacity=law==='seven'?'0.12':'1';
+    document.querySelector('#hexad').style.opacity=law==='three'?'0.12':'1';
+    document.querySelector('#diagram-caption').textContent=law==='three'?'Triângulo · Lei de Três':law==='seven'?'Sequência interna · Lei de Sete':'As duas leis em uma figura';
+    selectPoint(selected);
+  }
+  document.querySelectorAll('[data-law]').forEach(b=>b.addEventListener('click',()=>setLaw(b.dataset.law)));
+  selectPoint(9);
+})();
+</script>
+</body>
+</html>
